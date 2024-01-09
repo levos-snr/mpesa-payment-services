@@ -7,3 +7,6 @@ node_modules/
 # Ignore compiled binaries
 *.exe
 *.dll
+
+# Ignore dependencies
+*.lock
