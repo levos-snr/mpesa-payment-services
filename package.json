@@ -1,0 +1,31 @@
+{
+  "name": "my-mpesa-library",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "rm -rf dist/ && prettier --write app/ && pnpm run build:cjs && pnpm run build:esm",
+    "build:esm": "tsc",
+    "build:cjs": "tsc --module commonJS --outDir dist/cjs" 
+
+  },
+  "keywords": [],
+  "author": "Lewis Odero",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.10.7",
+    "@types/react": "^18.2.47",
+    "@types/react-dom": "^18.2.18",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "typescript": "^5.3.3"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
