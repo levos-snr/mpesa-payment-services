@@ -8,7 +8,7 @@
     "dist"
   ],
   "scripts": {
-    "build": "rm -rf dist/ && prettier --write app/ && pnpm run build:cjs && pnpm run build:esm",
+    "build": "rm -rf dist/ && prettier --write src/ && pnpm run build:cjs && pnpm run build:esm",
     "build:esm": "tsc",
     "build:cjs": "tsc --module commonJS --outDir dist/cjs" 
 
